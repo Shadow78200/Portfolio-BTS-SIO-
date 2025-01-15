@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Slider Styles */
+.slider {
+  width: 100%;
+  min-height: 80vh;
+  aspect-ratio: 16/9;
+  background: #000;
+  position: relative;
+}
+
+.slider-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(20%);
+}
+
+.slider-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.slider-content p {
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h1 {
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+  color: #FFF;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem; /* Correction de la virgule */
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.boxed {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.proposdemoi {
+  width: 40%;
+}
+
+.descriptiona {
+  width: 60%;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #333;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px 0;
+  display: inline-block;
+}
+
+.navbar ul li a:hover {
+  color: #ddd;
+}
+
+/* Offset for Fixed Navbar */
+.section {
+  padding-top: 80px;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Column Section Styling */
+.column-section {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+
+.column-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Animation d'écriture et disparition */
+@keyframes typewriter-loop {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 100%;
+  }
+  90% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+/* Animation du curseur */
+@keyframes blink {
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* Effet d'écriture en boucle */
+.typewriter-subtext {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white; /* Simule un curseur */
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+  width: 0;
+  animation: typewriter-loop 5s steps(30, end) infinite, blink 0.5s step-end infinite;
+}
+
+#accueil {
+  padding-top: 80px;  /* Ajuste en fonction de la hauteur de ta navbar */
+}
+
+/* Global section styles */
+.section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+/* Wrapper for the main content */
+.boxed {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles styling */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3, h4 {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Subsections alignment */
+.content-block {
+  margin-bottom: 30px;
+}
+
+.sub-block {
+  margin-top: 15px;
+  padding-left: 10px;
+  border-left: 3px solid #007bff;
+}
+
+.sub-block h4 {
+  color: #007bff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .section {
+      padding: 30px 15px;
+  }
+
+  .boxed {
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  h3 {
+      font-size: 1.2rem;
+  }
+
+  h4 {
+      font-size: 1rem;
+  }
+
+  p {
+      font-size: 0.9rem;
+  }
+}
+
+.photoperso{
+  width : 250px;
+  height : 250px;
+  border: none;
+  -moz-border-radius : 75px;
+  -webkit-border-radius : 75px;
+  border-radius : 75px;
+  margin-block: 200px;
+  margin-right: 7px;
+}
